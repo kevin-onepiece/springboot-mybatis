@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kevin.mybatis.mapper.UserMapper">
+    <select id="selectSingle" resultMap="mapSingle">
+        select user_name, user_password from hooc_user where user_id = #{userId};
+    </select>
+    <resultMap id="mapSingle" type="com.kevin.mybatis.entity.User">
+        <result property="userName" column="user_name"/>
+        <result property="password" column="user_password"/>
+    </resultMap>
+</mapper>

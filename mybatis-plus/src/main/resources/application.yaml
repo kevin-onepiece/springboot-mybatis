@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hooc?serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 200
+      minimum-idle: 50
+mybatis-plus:
+  type-aliases-package: com.kevin.mybatisplus.entity
+  mapper-locations: classpath:mapper/*Mapper.xml
